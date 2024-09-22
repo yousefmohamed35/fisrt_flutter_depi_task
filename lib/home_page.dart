@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Assignment',
           style: TextStyle(
             fontWeight: FontWeight.bold,
@@ -16,16 +16,19 @@ class HomePage extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
             onPressed: () {},
           ),
         ],
         leading: IconButton(
-          icon: Icon(Icons.menu),
+          icon: const Icon(Icons.menu),
           onPressed: () {},
         ),
       ),
-      body: HomeBody(),
+      body: const Padding(
+        padding: EdgeInsets.only(left: 16, right: 16, top: 16),
+        child: HomeBody(),
+      ),
     );
   }
 }
